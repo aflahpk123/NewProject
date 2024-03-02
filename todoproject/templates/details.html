@@ -1,0 +1,18 @@
+  {% extends 'base.html' %}
+  {% load static %}
+  {% block body %}
+
+  <div class=" shadow card my-3" style="width:40rem;">
+  <img class="card-img-top" src= "{% static 'images/nature3.jpg' %} " alt="">
+  <div class="card-body">
+    <h5 class="card-title">{{dtls.task_name}}</h5>
+    <p class="card-text">{{dtls.priority}}</p>
+      <p class="card-text">{{dtls.date}}</p>
+    <a href="{% url 'delete' dtls.id %}" class="btn btn-danger">Delete</a>
+      <a href="{% url 'update' dtls.id %}" class="btn btn-success">Update</a>
+  </div>
+</div>
+
+
+
+  {% endblock %}
